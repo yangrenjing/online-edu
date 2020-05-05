@@ -1,6 +1,7 @@
 package com.atguigu.eduservice.controller;
 
 
+import com.atguigu.baseservice.exception.ServiceException;
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.service.EduTeacherService;
 import com.atguigu.util.R;
@@ -37,6 +38,9 @@ public class EduTeacherController {
     @ApiOperation(value = "根据ID删除讲师", notes = "参数ID为讲师的ID")
     @DeleteMapping("{id}")
     public R delete (@ApiParam(name = "id", value = "讲师ID", required = true) @PathVariable String id) {
+        if (id.equals("1")) {
+            throw new ServiceException(500, "自定义异常");
+        }
         return R.ok().data(teacherService.removeById(id));
     }
 }

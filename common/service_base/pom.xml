@@ -11,6 +11,19 @@
 
     <groupId>com.yrj</groupId>
     <artifactId>service_base</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.yrj</groupId>
+            <artifactId>common_util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.2.5.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
