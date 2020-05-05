@@ -8,6 +8,7 @@ import com.atguigu.util.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,7 @@ import java.util.List;
 @Api(value = "讲师管理",tags={"用户操作接口"})
 @RestController
 @RequestMapping("/eduservice/teacher")
+@Slf4j
 public class EduTeacherController {
 
     @Autowired
@@ -38,9 +40,6 @@ public class EduTeacherController {
     @ApiOperation(value = "根据ID删除讲师", notes = "参数ID为讲师的ID")
     @DeleteMapping("{id}")
     public R delete (@ApiParam(name = "id", value = "讲师ID", required = true) @PathVariable String id) {
-        if (id.equals("1")) {
-            throw new ServiceException(500, "自定义异常");
-        }
         return R.ok().data(teacherService.removeById(id));
     }
 }
