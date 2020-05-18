@@ -1,6 +1,8 @@
 package com.atguigu.eduservice.config;
 
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -12,4 +14,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.atguigu.eduservice.mapper")
 public class EduConfig {
+    /**
+     * mybatis plus分页插件
+     *
+     * @param
+     * @return com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor
+     * @author Yangrj
+     * @date 2020/5/17
+     */
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
+    }
 }
