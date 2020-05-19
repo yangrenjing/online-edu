@@ -9,3 +9,4 @@
 1. MyBatis-plus，一个加强版的Mybatis（ https://mp.baomidou.com/guide/ ）  
 2. Swagger2,一个根据注解生成接口文档工具。熟悉一下如何配置，和相关的注解即可。  
 3. Maven项目构建和依赖管理工具。看下这系列文章，操作一波即可 （ https://mp.weixin.qq.com/s/RfgETkcpLM_aSLUihGsJow ）
+4. 阿里云oos存储对象的集成。不得不说，阿里云的接口调用确实方便。（https://help.aliyun.com/document_detail/84841.html?spm=a2c4g.11186623.6.813.1abc31b3eyXnqV）
